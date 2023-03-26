@@ -11,3 +11,5 @@ yarn-error.log
 # Code coverage
 coverage
 .DS_Store
+.parcel-cache
+dist
