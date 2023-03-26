@@ -3,15 +3,13 @@
   "version": "0.0.1",
   "private": "false",
   "description": "",
-  "source": "src/index.js",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "author": "Korhan ÖZBEK<korhanozbek44@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "parcel build",
     "start": "pm2 start ecosystem.config.json --no-daemon",
     "dev": "cross-env NODE_ENV=development nodemon src/index.js",
     "test": "jest -i --colors --verbose --detectOpenHandles",
@@ -63,7 +61,6 @@
     "husky": "^7.0.0",
     "jest": "^26.0.1",
     "lint-staged": "^11.0.0",
-    "parcel": "^2.8.3",
     "node-mocks-http": "^1.8.0",
     "nodemon": "^2.0.0",
     "prettier": "^2.0.5",
