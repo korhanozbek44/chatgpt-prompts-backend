@@ -21,11 +21,11 @@ const getAll = catchAsync(async (req, res) => {
 });
 
 const getOne = catchAsync(async (req, res) => {
-  const result = await promptsDb.where(firebase.firestore.FieldPath.documentId(), '==', req.params.promptId).get();
-  if (!result) {
+  const result = await promptsDb.doc(req.params.promptId).get();
+  if (!result || !result.data()) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Prompt not found');
   }
-  res.send(result);
+  res.send(result.data());
 });
 
 const search = catchAsync(async (req, res) => {
